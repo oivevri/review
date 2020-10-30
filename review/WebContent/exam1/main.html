@@ -16,8 +16,15 @@ $(function(){
 	   1. 자바스크립트
 	   2. jquery
 	*/ 
-	img.addEventListener("click", mouseHandler);
+	img.addEventListener("click", mouseHandler); // 이미지 클릭하면 펑션 실행
 
+	function mouseHandler() {
+		var alt = $(this).children("img").attr("alt");
+		$(".content").innerHTML = "<a href='" + alt + ".html>";
+		
+		/* var imgsrc = $(this).attr("src").substring(0,7); // _o 까지 자름
+		$(this).attr("src", imgsrc + 'n.png'); // 이게 될까...??? */
+	};
 	
 });
 
@@ -26,9 +33,9 @@ $(function(){
 <body>
 	<div class="header">
 		<ul class="menu">
-			<li><a href="panel_Home.html" class="rollover menuitem"><img src="./images/menu01_off.png" alt="panel_Home" /></a></li>
-			<li><a href="panel_Products.html" class="rollover menuitem"><img src="./images/menu02_off.png" alt="panel_Products" /></a></li>
-			<li><a href="panel_Company.html" class="rollover menuitem"><img src="./images/menu03_off.png" alt="panel_Company" /></a></li>
+			<li><a href="#" class="rollover menuitem"><img src="./images/menu01_off.png" alt="panel_Home" /></a></li>
+			<li><a href="#" class="rollover menuitem"><img src="./images/menu02_off.png" alt="panel_Products" /></a></li>
+			<li><a href="#" class="rollover menuitem"><img src="./images/menu03_off.png" alt="panel_Company" /></a></li>
 		</ul>
 	</div>
 	<div class="content"></div>
