@@ -10,7 +10,7 @@
 	// 체크한 상품의 수량과 단가의 곱의 전체 합계를 출력하시오.
 	$(function() {
 		// 아!! 버튼 클릭하면 돌아가는 이벤트였음 ㅠㅠ 어떻게 이런 실수를 하노..
-		
+		$("#btn").bind("click", function() {
 		var num = 0;
 		var cost = 0;
 		var sum = 0;
@@ -50,6 +50,7 @@
 		
 
 		$("#total").append(sum);
+		});
 	});
 </script>
 </head>
